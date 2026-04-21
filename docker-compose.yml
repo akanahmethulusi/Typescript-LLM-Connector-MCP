@@ -1,0 +1,12 @@
+services:
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: recycling_user
+      POSTGRES_PASSWORD: recycling_password
+      POSTGRES_DB: recycling_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql

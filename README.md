@@ -2,9 +2,10 @@
 
 🚀 MCP-basierter KI-Agent für sichere PostgreSQL-Anbindungen. Implementiert Human-in-the-Loop Workflows für autonome Systeme. Entwickelt mit TypeScript & Docker.
 
-
+### Terminal Ausgabe:
 <img width="640" height="139" alt="Bildschirmfoto 2026-04-21 um 11 22 08" src="https://github.com/user-attachments/assets/4e395bd0-f215-435d-862b-5cb18ec12bf3" />
 
+### Schnitstelle Ausgabe:
 <img width="822" height="562" alt="Bildschirmfoto 2026-04-21 um 14 48 22" src="https://github.com/user-attachments/assets/e27049f3-56c2-46c0-b4b1-9a3231ad62f5" />
 
 

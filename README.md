@@ -83,3 +83,40 @@ Dein Projekt sollte jetzt so aussehen:
 ├── package.json
 └── tsconfig.json
 ```
+
+
+### Schritt-für-Schritt-Anleitung:
+1. Claude Desktop installieren
+Falls noch nicht geschehen, lade Claude Desktop herunter und installiere es.
+
+2. Die Konfigurationsdatei öffnen
+Claude Desktop liest seine Erweiterungen aus einer speziellen config.json.
+macOS: ~/Library/Application Support/Claude/claude_desktop_config.json
+Windows: %APPDATA%\Claude\claude_desktop_config.json
+Öffne diese Datei mit einem Texteditor (z. B. VS Code).
+
+3. Deinen Loacker-Server registrieren
+Füge dein Projekt unter mcpServers hinzu. Ersetze /DEIN/PFAD/ durch den absoluten Pfad zu deinem Projektordner:
+
+json
+```
+{
+  "mcpServers": {
+    "loacker-llm-pg": {
+      "command": "node",
+      "args": ["/DEIN/PFAD/recycling-llm-pg/dist/index.js"],
+      "env": {
+        "DATABASE_URL": "postgresql://recycling_user:recycling_password@localhost:5433/recycling_db"
+      }
+    }
+  }
+}
+```
+
+4. Claude Desktop neu starten
+Beende Claude Desktop komplett und starte es neu. Wenn alles geklappt hat, siehst du unten rechts im Chat-Feld ein kleines Hammer-Icon (oder ein Stecker-Symbol).
+
+5. Den Agenten testen
+Du musst jetzt keinen Code mehr tippen. Schreibe einfach in den Chat:
+"Welche Waffeln haben wir auf Lager?"
+"Erstelle einen Bestellentwurf für 10x Loacker Quadratini."

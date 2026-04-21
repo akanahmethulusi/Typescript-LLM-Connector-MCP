@@ -2,6 +2,7 @@
 
 🚀 MCP-basierter KI-Agent für sichere PostgreSQL-Anbindungen. Implementiert Human-in-the-Loop Workflows für autonome Systeme. Entwickelt mit TypeScript & Docker.
 
+
 ### Terminal Ausgabe:
 <img width="640" height="139" alt="Bildschirmfoto 2026-04-21 um 11 22 08" src="https://github.com/user-attachments/assets/4e395bd0-f215-435d-862b-5cb18ec12bf3" />
 
@@ -12,6 +13,7 @@
 
 Dieses Projekt demonstriert die Implementierung eines autonomen Agentensystems auf Basis des Model Context Protocol (MCP). Es dient als sichere Schnittstelle zwischen einem Large Language Model (LLM) und einer PostgreSQL-Produktionsdatenbank.
 
+
 🚀 Key Features
 Sichere Datenanbindung: Verwendung von Parameterized Queries zur Vermeidung von SQL-Injection.
 Human-in-the-Loop (HITL): Zweistufiger Bestellprozess (propose -> confirm), um unkontrollierte Datenbank-Schreibvorgänge durch KI-Agenten zu verhindern.
@@ -19,11 +21,13 @@ Human-in-the-Loop (HITL): Zweistufiger Bestellprozess (propose -> confirm), um u
 ### Schema-Validierung: Strikte Typisierung der LLM-Inputs mittels Zod und TypeScript.
 Modern Stack: Basierend auf Node.js, MCP SDK und PostgreSQL.
 
+
 🛠 Architektur & Sicherheit
 Der Agent greift nicht direkt auf die Datenbank zu. Stattdessen nutzt er definierte Tools:
-### Read-Only Zugriff: Abfrage von Lagerbeständen über einen dedizierten DB-User.
-### Gated Writes: Bestellungen werden initial im Status DRAFT angelegt. Eine finale Buchung erfolgt erst nach expliziter Bestätigung durch den Nutzer.
-### Leitplanken: Mengenbegrenzungen und Typprüfungen direkt in der Tool-Definition.
+- Read-Only Zugriff: Abfrage von Lagerbeständen über einen dedizierten DB-User.
+- Gated Writes: Bestellungen werden initial im Status DRAFT angelegt. Eine finale Buchung erfolgt erst nach expliziter Bestätigung durch den Nutzer.
+- Leitplanken: Mengenbegrenzungen und Typprüfungen direkt in der Tool-Definition.
+
 
 📦 Installation
 
@@ -33,6 +37,7 @@ npm install
 npm run build
 ```
 
+
 ⚙️ Konfiguration
 Erstelle eine .env Datei mit folgendem Inhalt:
 
@@ -40,6 +45,7 @@ env
 ```
 DATABASE_URL=postgresql://user:password@localhost:5432/loacker_db
 ```
+
 
 🖥 Nutzung mit Claude Desktop / MCP Inspector
 Um den Server lokal zu testen, kannst du den MCP Inspector nutzen:
@@ -61,6 +67,7 @@ In der claude_desktop_config.json:
   }
 }
 ```
+
 
 ### Empfohlene Ordnerstruktur
 Dein Projekt sollte jetzt so aussehen:

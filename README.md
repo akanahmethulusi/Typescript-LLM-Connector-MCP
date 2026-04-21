@@ -24,14 +24,18 @@ Der Agent greift nicht direkt auf die Datenbank zu. Stattdessen nutzt er definie
 📦 Installation
 
 bash
+```
 npm install
 npm run build
+```
 
 ⚙️ Konfiguration
 Erstelle eine .env Datei mit folgendem Inhalt:
 
 env
+```
 DATABASE_URL=postgresql://user:password@localhost:5432/loacker_db
+```
 
 🖥 Nutzung mit Claude Desktop / MCP Inspector
 Um den Server lokal zu testen, kannst du den MCP Inspector nutzen:
@@ -40,7 +44,7 @@ bash
 npx @modelcontextprotocol/inspector node dist/index.js
 
 In der claude_desktop_config.json:
-json
+```json
 {
   "mcpServers": {
     "loacker-llm-pg": {
@@ -52,3 +56,19 @@ json
     }
   }
 }
+```
+
+### Empfohlene Ordnerstruktur
+Dein Projekt sollte jetzt so aussehen:
+
+```MCP-llm-pg-typescript/
+├── node_modules/
+├── src/
+│   ├── index.ts     (Der MCP Server Code)
+│   └── db.ts        (Die Datenbank-Logik)
+├── .env
+├── docker-compose.yml
+├── init.sql
+├── package.json
+└── tsconfig.json
+```

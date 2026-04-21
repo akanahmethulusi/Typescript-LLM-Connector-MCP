@@ -116,7 +116,14 @@ json
 4. Claude Desktop neu starten
 Beende Claude Desktop komplett und starte es neu. Wenn alles geklappt hat, siehst du unten rechts im Chat-Feld ein kleines Hammer-Icon (oder ein Stecker-Symbol).
 
+
 5. Den Agenten testen
 Du musst jetzt keinen Code mehr tippen. Schreibe einfach in den Chat:
 "Welche Waffeln haben wir auf Lager?"
 "Erstelle einen Bestellentwurf für 10x Loacker Quadratini."
+
+
+### Troubleshooting:
+
+"Logs can be found in ~/Library/Logs/Claude/mcp.log on macOS to debug connection issues between the LLM and the PostgreSQL bridge."
+
